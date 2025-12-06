@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>العوامل المؤثرة على اتخاذ القرار الشرائي - Adidas Case Study</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+<style>
+        body { font-family: 'Cairo', sans-serif; }
+        .adidas-stripe {
+            height: 100%;
+            width: 4px;
+            background-color: rgba(255,255,255,0.15);
+            transform: skewX(-15deg);
+        }
+        .chart-container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<!-- Main Container -->
+<div class="w-[1280px] min-h-[720px] bg-white relative overflow-hidden flex flex-col shadow-2xl mx-auto">
+<!-- Header Section -->
+<div class="h-24 bg-gray-900 flex items-center justify-between px-12 relative z-10 overflow-hidden">
+<!-- Title Area -->
+<div class="flex flex-col justify-center z-20">
+<div class="flex items-center mb-1">
+<span class="w-1.5 h-6 bg-blue-500 rounded-full ml-3"></span>
+<h2 class="text-gray-200 text-lg font-medium tracking-wide">المبحث الأول: الإطار النظري</h2>
+</div>
+<h1 class="text-white text-3xl font-black pr-5">العوامل المؤثرة على اتخاذ القرار الشرائي</h1>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute left-20 -top-4 h-32 flex gap-2">
+<div class="adidas-stripe"></div>
+<div class="adidas-stripe"></div>
+<div class="adidas-stripe"></div>
+</div>
+<!-- Section Icon -->
+<div class="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center border border-gray-700 z-20 shadow-lg">
+<i class="fas fa-chart-pie text-2xl text-blue-400"></i>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 p-8 bg-gray-50 flex gap-8">
+<!-- Left Column: Chart Area (Visual Representation) -->
+<div class="w-1/2 bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold text-gray-800 border-r-4 border-blue-900 pr-3">الوزن النسبي للعوامل المؤثرة</h3>
+<div class="bg-blue-50 text-blue-900 px-3 py-1 rounded-full text-xs font-bold">نموذج B2C</div>
+</div>
+<div class="flex-1 relative chart-container flex items-center justify-center">
+<canvas id="factorsChart"></canvas>
+</div>
+<div class="mt-4 text-center">
+<p class="text-xs text-gray-500 bg-gray-50 py-2 px-4 rounded-lg inline-block">
+<i class="fas fa-info-circle ml-1"></i> تتداخل هذه العوامل وتختلف أهميتها حسب نوع المنتج (فاخر vs ضروري)
+                    </p>
+</div>
+</div>
+<!-- Right Column: Detailed Factors (Text Content) -->
+<div class="w-1/2 flex flex-col justify-between">
+<!-- Factor 1: Personal & Psychological -->
+<div class="bg-white p-4 rounded-xl shadow-sm border-r-4 border-blue-600 mb-3 flex items-start group hover:shadow-md transition-all">
+<div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 ml-4 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+<i class="fas fa-user-astronaut"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-800 mb-1">عوامل شخصية ونفسية</h4>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">العمر</span>
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">نمط الحياة</span>
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">الدوافع</span>
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">الإدراك</span>
+</div>
+</div>
+</div>
+<!-- Factor 2: Social & Cultural -->
+<div class="bg-white p-4 rounded-xl shadow-sm border-r-4 border-indigo-500 mb-3 flex items-start group hover:shadow-md transition-all">
+<div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600 ml-4 shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+<i class="fas fa-users"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-800 mb-1">عوامل اجتماعية وثقافية</h4>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">الأسرة</span>
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">الأصدقاء</span>
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">الثقافة الفرعية</span>
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">الطبقة الاجتماعية</span>
+</div>
+</div>
+</div>
+<!-- Factor 3: Economic -->
+<div class="bg-white p-4 rounded-xl shadow-sm border-r-4 border-gray-700 mb-3 flex items-start group hover:shadow-md transition-all">
+<div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-700 ml-4 shrink-0 group-hover:bg-gray-700 group-hover:text-white transition-colors">
+<i class="fas fa-wallet"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-800 mb-1">عوامل اقتصادية</h4>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">الدخل المتاح</span>
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">حساسية السعر</span>
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">الوضع الاقتصادي العام</span>
+</div>
+</div>
+</div>
+<!-- Factor 4: Digital & Situational (Modern B2C) -->
+<div class="bg-gray-800 p-4 rounded-xl shadow-sm border-r-4 border-blue-400 flex items-start group hover:bg-gray-900 transition-all">
+<div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-blue-400 ml-4 shrink-0 group-hover:bg-gray-600 transition-colors">
+<i class="fas fa-mobile-alt"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-1">عوامل رقمية وموقفية (حديثة)</h4>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">توصيات الخوارزميات</span>
+<span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">المؤثرون (Influencers)</span>
+<span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">تجربة المستخدم UX</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Section -->
+<div class="h-12 bg-white border-t border-gray-200 flex items-center justify-between px-12 z-20">
+<div class="flex items-center text-gray-500 text-xs font-semibold uppercase tracking-wider">
+<span class="w-2 h-2 bg-blue-900 rounded-full ml-2"></span>
+                Adidas Case Study
+            </div>
+<div class="flex items-center space-x-2 space-x-reverse text-gray-400 text-sm">
+<span class="text-gray-800 font-bold">5</span>
+<span>/</span>
+<span>13</span>
+</div>
+</div>
+<!-- Bottom Accent Line -->
+<div class="h-1.5 w-full bg-gray-900 flex">
+<div class="h-full w-2/5 bg-blue-600"></div>
+</div>
+</div>
+<script>
+        // Chart.js Configuration
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('factorsChart').getContext('2d');
+            
+            // Register DataLabels plugin if needed, or use default tooltips
+            // Chart.register(ChartDataLabels); 
+
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['عوامل شخصية ونفسية', 'عوامل اجتماعية وثقافية', 'عوامل اقتصادية', 'عوامل رقمية وموقفية'],
+                    datasets: [{
+                        data: [35, 25, 20, 20],
+                        backgroundColor: [
+                            '#1e40af', // Blue 800 (Personal)
+                            '#4f46e5', // Indigo 600 (Social)
+                            '#374151', // Gray 700 (Economic)
+                            '#60a5fa'  // Blue 400 (Digital - Accent)
+                        ],
+                        borderWidth: 0,
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    layout: {
+                        padding: 20
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    family: "'Cairo', sans-serif",
+                                    size: 12
+                                },
+                                boxWidth: 15,
+                                padding: 15,
+                                usePointStyle: true
+                            },
+                            rtl: true
+                        },
+                        tooltip: {
+                            rtl: true,
+                            titleFont: { family: "'Cairo', sans-serif" },
+                            bodyFont: { family: "'Cairo', sans-serif" },
+                            callbacks: {
+                                label: function(context) {
+                                    return ' ' + context.label + ': ' + context.raw + '%';
+                                }
+                            }
+                        }
+                    },
+                    cutout: '60%',
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
