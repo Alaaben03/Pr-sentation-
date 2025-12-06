@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تطبيق مراحل اتخاذ القرار الشرائي - Adidas Case Study</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { font-family: 'Cairo', sans-serif; }
+        .adidas-stripe {
+            height: 100%;
+            width: 5px;
+            background-color: rgba(255,255,255,0.15);
+            transform: skewX(-15deg);
+        }
+        .timeline-line {
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 4px;
+            background-color: #e5e7eb;
+            z-index: 0;
+        }
+        .timeline-progress {
+            position: absolute;
+            top: 40px;
+            right: 10%; /* Start from right for RTL */
+            width: 80%; /* Assume completed journey */
+            height: 4px;
+            background: #1e40af; /* Blue-800 */
+            z-index: 0;
+        }
+        .stage-card {
+            transition: all 0.3s ease;
+        }
+        .stage-card:hover {
+            transform: translateY(-5px);
+        }
+        .touchpoint-badge {
+            position: relative;
+            overflow: hidden;
+        }
+        .touchpoint-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<!-- Main Container -->
+<div class="w-[1280px] min-h-[720px] bg-white relative overflow-hidden flex flex-col shadow-2xl mx-auto">
+<!-- Header Section -->
+<div class="h-24 bg-gray-900 flex items-center justify-between px-12 relative z-10 overflow-hidden shrink-0">
+<!-- Title Area -->
+<div class="flex flex-col justify-center z-20">
+<div class="flex items-center mb-1">
+<span class="w-1.5 h-6 bg-blue-500 rounded-full ml-3"></span>
+<h2 class="text-gray-200 text-lg font-medium tracking-wide">المبحث الثالث: دراسة حالة شركة Adidas</h2>
+</div>
+<h1 class="text-white text-3xl font-black pr-5">تطبيق مراحل القرار الشرائي (مثال: حذاء جري)</h1>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute left-20 -top-4 h-32 flex gap-2">
+<div class="adidas-stripe"></div>
+<div class="adidas-stripe"></div>
+<div class="adidas-stripe"></div>
+</div>
+<!-- Section Icon -->
+<div class="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center border border-gray-700 z-20 shadow-lg">
+<i class="fas fa-shoe-prints text-2xl text-blue-400"></i>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 p-8 bg-gray-50 flex flex-col relative overflow-hidden">
+<!-- Context Note -->
+<div class="mb-8 bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-12 h-12 bg-blue-50 text-blue-800 rounded-full flex items-center justify-center ml-4">
+<i class="fas fa-running text-xl"></i>
+</div>
+<div>
+<h3 class="font-bold text-gray-800">السيناريو التطبيقي:</h3>
+<p class="text-sm text-gray-600">مستهلك يرغب في شراء حذاء <span class="font-bold text-blue-800">Ultraboost</span> لتحسين أدائه الرياضي (قرار عالي الانخراط).</p>
+</div>
+</div>
+<div class="text-right">
+<span class="bg-gray-900 text-white text-xs px-3 py-1 rounded-full font-bold">High Involvement Product</span>
+</div>
+</div>
+<!-- Timeline Container -->
+<div class="flex-1 relative flex items-start justify-between mt-4 px-4">
+<!-- Lines -->
+<div class="timeline-line"></div>
+<div class="timeline-progress"></div>
+<!-- Stage 1: Problem Recognition -->
+<div class="relative z-10 flex flex-col items-center w-1/5 group">
+<div class="w-20 h-20 bg-white border-4 border-blue-800 rounded-full flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+<i class="fas fa-lightbulb text-2xl text-blue-800"></i>
+</div>
+<div class="stage-card bg-white p-4 rounded-xl shadow-md border-t-4 border-gray-800 w-full text-center h-full">
+<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">المرحلة 1</div>
+<h4 class="font-bold text-gray-900 mb-2">إدراك الحاجة</h4>
+<p class="text-xs text-gray-600 mb-3 leading-relaxed">الشعور بألم في القدم أثناء الجري أو رؤية إعلان محفز.</p>
+<div class="touchpoint-badge bg-gray-50 p-2 rounded text-right">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-1">نقاط تماس Adidas</p>
+<p class="text-xs font-semibold text-blue-700"><i class="fab fa-instagram ml-1"></i>إعلانات اجتماعية</p>
+</div>
+</div>
+</div>
+<!-- Stage 2: Information Search -->
+<div class="relative z-10 flex flex-col items-center w-1/5 group">
+<div class="w-20 h-20 bg-white border-4 border-blue-800 rounded-full flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+<i class="fas fa-search text-2xl text-blue-800"></i>
+</div>
+<div class="stage-card bg-white p-4 rounded-xl shadow-md border-t-4 border-gray-800 w-full text-center h-full">
+<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">المرحلة 2</div>
+<h4 class="font-bold text-gray-900 mb-2">البحث عن المعلومات</h4>
+<p class="text-xs text-gray-600 mb-3 leading-relaxed">البحث عن "أفضل أحذية جري" ومراجعة المواصفات.</p>
+<div class="touchpoint-badge bg-gray-50 p-2 rounded text-right">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-1">نقاط تماس Adidas</p>
+<p class="text-xs font-semibold text-blue-700"><i class="fab fa-youtube ml-1"></i>مراجعات يوتيوب</p>
+<p class="text-xs font-semibold text-blue-700"><i class="fas fa-globe ml-1"></i>SEO الموقع</p>
+</div>
+</div>
+</div>
+<!-- Stage 3: Evaluation -->
+<div class="relative z-10 flex flex-col items-center w-1/5 group">
+<div class="w-20 h-20 bg-white border-4 border-blue-800 rounded-full flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+<i class="fas fa-balance-scale text-2xl text-blue-800"></i>
+</div>
+<div class="stage-card bg-white p-4 rounded-xl shadow-md border-t-4 border-gray-800 w-full text-center h-full">
+<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">المرحلة 3</div>
+<h4 class="font-bold text-gray-900 mb-2">تقييم البدائل</h4>
+<p class="text-xs text-gray-600 mb-3 leading-relaxed">مقارنة Ultraboost مع Nike Pegasus من حيث الراحة والسعر.</p>
+<div class="touchpoint-badge bg-gray-50 p-2 rounded text-right">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-1">نقاط تماس Adidas</p>
+<p class="text-xs font-semibold text-blue-700"><i class="fas fa-microchip ml-1"></i>تقنية Boost</p>
+<p class="text-xs font-semibold text-blue-700"><i class="fas fa-star ml-1"></i>تقييمات الموقع</p>
+</div>
+</div>
+</div>
+<!-- Stage 4: Purchase Decision -->
+<div class="relative z-10 flex flex-col items-center w-1/5 group">
+<div class="w-20 h-20 bg-white border-4 border-blue-800 rounded-full flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+<i class="fas fa-shopping-cart text-2xl text-blue-800"></i>
+</div>
+<div class="stage-card bg-white p-4 rounded-xl shadow-md border-t-4 border-gray-800 w-full text-center h-full">
+<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">المرحلة 4</div>
+<h4 class="font-bold text-gray-900 mb-2">قرار الشراء</h4>
+<p class="text-xs text-gray-600 mb-3 leading-relaxed">اختيار اللون، المقاس، وإتمام الدفع.</p>
+<div class="touchpoint-badge bg-gray-50 p-2 rounded text-right">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-1">نقاط تماس Adidas</p>
+<p class="text-xs font-semibold text-blue-700"><i class="fas fa-mobile-alt ml-1"></i>تطبيق Adidas</p>
+<p class="text-xs font-semibold text-blue-700"><i class="fas fa-percent ml-1"></i>خصم ترحيبي</p>
+</div>
+</div>
+</div>
+<!-- Stage 5: Post-Purchase -->
+<div class="relative z-10 flex flex-col items-center w-1/5 group">
+<div class="w-20 h-20 bg-white border-4 border-green-500 rounded-full flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+<i class="fas fa-heart text-2xl text-green-600"></i>
+</div>
+<div class="stage-card bg-white p-4 rounded-xl shadow-md border-t-4 border-green-500 w-full text-center h-full">
+<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">المرحلة 5</div>
+<h4 class="font-bold text-gray-900 mb-2">ما بعد الشراء</h4>
+<p class="text-xs text-gray-600 mb-3 leading-relaxed">تجربة الجري، الرضا، ومشاركة الصورة.</p>
+<div class="touchpoint-badge bg-gray-50 p-2 rounded text-right">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-1">نقاط تماس Adidas</p>
+<p class="text-xs font-semibold text-blue-700"><i class="fas fa-medal ml-1"></i>نقاط AdiClub</p>
+<p class="text-xs font-semibold text-blue-700"><i class="fas fa-envelope ml-1"></i>نصائح الجري</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Section -->
+<div class="h-12 bg-white border-t border-gray-200 flex items-center justify-between px-12 z-20 shrink-0">
+<div class="flex items-center text-gray-500 text-xs font-semibold uppercase tracking-wider">
+<span class="w-2 h-2 bg-blue-900 rounded-full ml-2"></span>
+                Adidas Case Study
+            </div>
+<div class="flex items-center space-x-2 space-x-reverse text-gray-400 text-sm">
+<span class="text-gray-800 font-bold">11</span>
+<span>/</span>
+<span>13</span>
+</div>
+</div>
+<!-- Bottom Accent Line -->
+<div class="h-1.5 w-full bg-gray-900 flex shrink-0">
+<div class="h-full w-4/5 bg-blue-600"></div>
+</div>
+</div>
+</body>
+</html>
